@@ -17,13 +17,10 @@ jobs:
         dotnet-version: 5.0.x
     - name: Restore dependencies
       run: dotnet restore
-      working-directory: App
     - name: Build
       run: dotnet build --no-restore
-      working-directory: App
     - name: Test
       run: dotnet test --no-build --verbosity normal
-      working-directory: App
 
   docker:
     runs-on: ubuntu-latest
